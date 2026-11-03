@@ -6,10 +6,12 @@ Jupyter notebooks that implement basic digital image-processing operations direc
 
 | Notebook | Topics |
 |---|---|
-| [`basics/image_processing.ipynb`](basics/image_processing.ipynb) | Loading images, grayscale conversion, thresholding / binarisation, cropping, line profiles, padding, box (mean) filters and Gaussian blur via 2D convolution |
-| [`correlation/understanding_correlation.ipynb`](correlation/understanding_correlation.ipynb) | Template matching: estimating where a template occurs in an image using cross-correlation |
+| [`basics/image_processing.ipynb`](basics/image_processing.ipynb) | Loading images, RGB channels, grayscale conversion (mean vs. luminance-weighted), histograms, thresholding, bit-depth reduction, channel swapping, cropping and binning, line profiles, edge padding, 1D box filter, 2D convolution and Gaussian blur |
+| [`correlation/understanding_correlation.ipynb`](correlation/understanding_correlation.ipynb) | Template matching with normalised cross-correlation, in 1D and 2D (locating a Gaussian spot in a noisy image) |
 
-## Requirements
+Each notebook is split into numbered sections with a short explanation before every step.
+
+## Running
 
 Python 3 with `numpy` and `matplotlib`:
 
@@ -17,6 +19,8 @@ Python 3 with `numpy` and `matplotlib`:
 pip install numpy matplotlib jupyter
 jupyter notebook
 ```
+
+Open the notebooks from their own folders; the example image `basics/Sunflower-field-Fargo-North-Dakota.jpg` is loaded with a relative path. The 2D convolution cells in `basics/` loop over every pixel in pure Python and take a long time on the full image. Crop the image first if you want to experiment.
 
 ## Further reading
 
